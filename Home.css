@@ -141,3 +141,49 @@ input {
     margin: 1;
   }
   
+
+  @media (max-width: 600px) {
+    .container {
+      padding: 10px;
+    }
+  
+    .header {
+      font-size: 18px;
+    }
+  
+    .content {
+      font-size: 14px;
+    }
+  }
+
+
+  @media (min-width: 601px) and (max-width: 1024px) {
+    .container {
+      padding: 15px;
+    }
+  
+    .header {
+      font-size: 24px;
+    }
+  
+    .content {
+      font-size: 16px;
+    }
+  }
+
+
+
+
+  @media (min-width: 1025px) {
+    .container {
+      padding: 20px;
+    }
+  
+    .header {
+      font-size: 32px;
+    }
+  
+    .content {
+      font-size: 18px;
+    }
+  }
