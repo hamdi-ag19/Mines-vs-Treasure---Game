@@ -139,7 +139,7 @@ document.addEventListener('DOMContentLoaded', function() {
           countdown--;
           if (countdown === 0) {
             clearInterval(countdownInterval);
-            window.location.href = 'end.html';
+            window.location.href = 'index3.html';
           }
         }, 1000);
       }, 500);
@@ -185,7 +185,7 @@ document.addEventListener('DOMContentLoaded', function() {
             countdown--;
             if (countdown === 0) {
               clearInterval(countdownInterval);
-              window.location.href = 'end.html';
+              window.location.href = 'index3.html';
             }
           }, 1000);
         }, 500);
