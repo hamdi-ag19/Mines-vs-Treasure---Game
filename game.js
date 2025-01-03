@@ -179,7 +179,7 @@ document.addEventListener('DOMContentLoaded', function() {
       setTimeout(() => {
         showMessage('No more attempts left! You lose!', false);
         setTimeout(() => {
-          let countdown = 20;
+          let countdown = 10;
           const countdownInterval = setInterval(() => {
             showMessage(`You lost! Redirecting to end page in ${countdown} seconds.`, false);
             countdown--;
