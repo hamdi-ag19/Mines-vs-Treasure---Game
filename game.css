@@ -163,50 +163,35 @@ body {
 }
 
 
+/* للشاشات الصغيرة مثل الهواتف */
 @media (max-width: 600px) {
-  .container {
-    padding: 10px;
+  .grid {
+    grid-template-columns: repeat(4, 1fr); /* شبكة من 4 أعمدة */
   }
-
-  .header {
-    font-size: 18px;
-  }
-
-  .content {
-    font-size: 14px;
+  .grid button {
+    width: 20%;
+    font-size: 0.8rem;
   }
 }
 
-
+/* للأجهزة اللوحية */
 @media (min-width: 601px) and (max-width: 1024px) {
-  .container {
-    padding: 15px;
+  .grid {
+    grid-template-columns: repeat(6, 1fr);
   }
-
-  .header {
-    font-size: 24px;
-  }
-
-  .content {
-    font-size: 16px;
+  .grid button {
+    width: 14%;
+    font-size: 1rem;
   }
 }
 
-
-
-
+/* للشاشات الكبيرة مثل الكمبيوتر */
 @media (min-width: 1025px) {
-  .container {
-    padding: 20px;
+  .grid {
+    grid-template-columns: repeat(8, 1fr);
   }
-
-  .header {
-    font-size: 32px;
-  }
-
-  .content {
-    font-size: 18px;
+  .grid button {
+    width: 12%;
+    font-size: 1.2rem;
   }
 }
-
-
