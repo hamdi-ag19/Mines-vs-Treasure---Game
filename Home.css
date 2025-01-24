@@ -25,18 +25,27 @@ body {
   
   .grid {
     display: grid;
-    grid-template-columns: repeat(8, 50px);
+    grid-template-columns: repeat(8, 1fr);
     grid-gap: 5px;
-    margin: 20px 0;
+    gap: 10px; /* المسافة بين العناصر */
+   justify-content: center; /* توسيط العناصر */
+  align-items: center; /* محاذاة العناصر في الوسط */
+  width: 100%;
+  max-width: 600px;
+    margin:auto;
   }
   
   .grid button {
-    width: 50px;
-    height: 50px;
-    font-size: 18px;
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    border-radius: 5px; /* حواف ناعمة */
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
     cursor: pointer;
-    width: 10vw; 
-  height: 10vh;
+    
   }
   
   .hud {
@@ -70,15 +79,28 @@ input {
   box-shadow: 0 0 5px rgb(0, 0, 0);
   }
   
+  .controls {
+    display: flex;
+    justify-content: center;
+    gap: 15px; /* مسافة بين الأزرار */
+    margin-top: 20px;
+  }
   
-  
+  button span {
+    display: block;
+    text-align: center;
+    line-height: 40px; /* نفس ارتفاع الزر */
+  }
+
   .button {
   background-color: #00e1ff;
   color: rgb(0, 0, 0);
   padding: 10px 20px;
+  font-size: 18px;
   border: none;
   border-radius: 15px;
   cursor: pointer;
+  transition: 0.3s;
   width: 50%;
   box-shadow: g e Spx rgba(e, 0,0, 0.1);
   }
@@ -145,15 +167,30 @@ input {
     margin: 1;
   }
   
+  @media (max-width: 480px) {
+    .grid {
+      grid-template-columns: repeat(3, 1fr); /* تقليل الأعمدة أكثر في الهواتف */
+      flex-direction: column;
+    }
+  
+    .grid button {
+      width: 30px;
+      height: 30px;
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+  }
 
   /* للشاشات الصغيرة مثل الهواتف */
 @media (max-width: 600px) {
   .grid {
     grid-template-columns: repeat(4, 1fr); /* شبكة من 4 أعمدة */
+    flex-direction: column;
   }
   .grid button {
     width: 20%;
     font-size: 0.8rem;
+    margin-bottom: 10px;
   }
 }
 
@@ -167,6 +204,20 @@ input {
     font-size: 1rem;
   }
 }
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(4, 1fr); /* تقليل الأعمدة عند الشاشات الصغيرة */
+    
+  }
+
+  .grid button {
+    width: 35px;
+    height: 35px;
+    font-size: 18px;
+  }
+}
+
 
 /* للشاشات الكبيرة مثل الكمبيوتر */
 @media (min-width: 1025px) {

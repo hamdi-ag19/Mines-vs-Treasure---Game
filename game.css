@@ -24,25 +24,59 @@ body {
   }  
   .grid {
     display: grid;
-    grid-template-columns: repeat(8, 50px);
-    grid-gap: 5px;
+    grid-template-columns: repeat(8, 50);
+    gap: 10px; /* المسافة بين العناصر */
+  justify-content: center; /* توسيط العناصر */
+  align-items: center; /* محاذاة العناصر في الوسط */
+  width: 100%;
+  max-width: 600px;
+    margin: auto;
+  }
+
+  
+
+  .controls {
     justify-content: center;
-    margin: 20px 0;
+    gap: 10px; /* مسافة بين الأزرار */
+    margin-top: 20px;
+    flex-wrap: nowrap;
+    width: 100%;
+    align-items: center;
   }
   
   .grid button {
-   width: 50px;
-  height: 50px;
-  font-size: 25px; 
+   width: 40px;
+  height: 40px;
+  padding: 10px 20px;
+  flex-wrap: wrap;
+  font-size: 18px; 
   text-align: center;
   vertical-align: middle;
   cursor: pointer;
   border: 1px solid #ddd;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border-radius: 4px;
+  padding: 10px 20px;
+  width: auto;
+  min-width: 50px;
+  text-align: center;
   transition: background-color 0.3s, transform 0.3s;
 
 
   }
+
+  button span {
+    display: block;
+    text-align: center;
+    line-height: 40px; /* نفس ارتفاع الزر */
+  }
+  
+  .grid button:last-child {
+    grid-column: auto; /* يضمن أن الزر الأخير يبقى في نفس الصف */
+}
 
   .grid button:hover {
     transform: scale(1.2);
@@ -69,7 +103,7 @@ body {
     justify-content: space-between;
     margin: 0 10px;
     text-align: center;
-    margin-top: 3px;
+    margin-top: 25px;
     display: inline-block; 
 
     transition: background-color 0.3s, transform 0.3s;
@@ -154,7 +188,7 @@ body {
   margin-top: auto;
   margin-top: 20px;
     box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
-    position: fixed;
+    position: fixed; 
 
   
 }
@@ -162,14 +196,27 @@ body {
   margin: 0;
 }
 
+@media (max-width: 480px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr); /* تقليل الأعمدة أكثر في الهواتف */
+    flex-direction: column;
+  }
+
+  .grid button {
+    width: 80px;
+    height: 30px;
+    font-size: 16px;
+  }
+}
 
 /* للشاشات الصغيرة مثل الهواتف */
 @media (max-width: 600px) {
   .grid {
     grid-template-columns: repeat(4, 1fr); /* شبكة من 4 أعمدة */
+    
   }
   .grid button {
-    width: 20%;
+    width: 80%;
     font-size: 0.8rem;
   }
 }
@@ -185,10 +232,24 @@ body {
   }
 }
 
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(4, 1fr); /* تقليل الأعمدة عند الشاشات الصغيرة */
+  }
+
+  .grid button {
+    width: 35px;
+    height: 35px;
+    font-size: 18px;
+  }
+}
+
+
 /* للشاشات الكبيرة مثل الكمبيوتر */
 @media (min-width: 1025px) {
   .grid {
     grid-template-columns: repeat(8, 1fr);
+    
   }
   .grid button {
     width: 12%;

@@ -51,7 +51,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 // إنشاء 64 زر (شبكة بحجم 8x8)
-  for (let i = 0; i < 64; i++) {
+  for (let i = 0; i < 63; i++) {
     const button = document.createElement('button');
     button.addEventListener('click', () => handleButtonClick(button, i));
     grid.appendChild(button);
