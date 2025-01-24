@@ -196,13 +196,13 @@ body {
   margin: 0;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 481px) {
   .grid {
     grid-template-columns: repeat(3, 1fr); /* تقليل الأعمدة أكثر في الهواتف */
   }
 
   .grid button {
-    width: 80px;
+    width: 30px;
     height: 30px;
     font-size: 16px;
   }
@@ -215,7 +215,7 @@ body {
     
   }
   .grid button {
-    width: 80%;
+    width: 20%;
     font-size: 0.8rem;
   }
 }
