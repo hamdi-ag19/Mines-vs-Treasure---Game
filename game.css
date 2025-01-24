@@ -199,7 +199,6 @@ body {
 @media (max-width: 480px) {
   .grid {
     grid-template-columns: repeat(3, 1fr); /* تقليل الأعمدة أكثر في الهواتف */
-    flex-direction: column;
   }
 
   .grid button {
